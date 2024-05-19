@@ -13,7 +13,9 @@ public class GerenciadorFuncionarios {
 
     //metódo que retorna o valor total pago no mês
     public void valorTotalMes(List<Funcionario> funcionarios, int mes, int ano) {
-
+        if (mes > 12 || mes < 1) {
+            throw new RuntimeException("Data inválida");
+        }
         funcionarios.forEach((funcionario) -> {
             if (funcionario.cargo == Cargo.secretario) {
                 Double salario = (1000.00 * (ano - funcionario.getAnocontratacao()) + 7000.00);
@@ -44,7 +46,9 @@ public class GerenciadorFuncionarios {
 
     //metodo que retorna valor total pago em salário no mês
     public void valorTotalSalarioMes(List<Funcionario> funcionarios, int mes, int ano) {
-
+        if (mes > 12 || mes < 1) {
+            throw new RuntimeException("Data inválida");
+        }
         funcionarios.forEach((funcionario) -> {
             if (funcionario.cargo == Cargo.secretario) {
                 Double salario = (1000.00 * (ano - funcionario.getAnocontratacao()) + 7000.00);
@@ -68,7 +72,9 @@ public class GerenciadorFuncionarios {
 
     //metodo que retorna valor total pago em Beneficio no mês
     public void valorTotalBeneficioMes(List<Funcionario> funcionarios, int mes, int ano) {
-
+        if (mes > 12 || mes < 1) {
+            throw new RuntimeException("Data inválida");
+        }
         funcionarios.forEach((funcionario) -> {
             if (funcionario.cargo == Cargo.secretario) {
                 Double salario = (1000.00 * (ano - funcionario.getAnocontratacao()) + 7000.00);
@@ -93,7 +99,9 @@ public class GerenciadorFuncionarios {
 
     //metodo que retorna o funcionario que recebeu o maior valor no mês
     public void maiorValorFuncionario(List<Funcionario> funcionarios, int mes, int ano) {
-
+        if (mes > 12 || mes < 1) {
+            throw new RuntimeException("Data inválida");
+        }
         funcionarios.forEach((funcionario) -> {
             if (funcionario.cargo == Cargo.secretario) {
                 Double salario = (1000.00 * (ano - funcionario.getAnocontratacao()) + 7000.00);
@@ -138,7 +146,9 @@ public class GerenciadorFuncionarios {
 
     //metodo que retorna o funcionario que recebeu o maior beneficio no mês
     public void maiorValorBeneficioFuncionario(List<Funcionario> funcionarios_contem_beneficios, int mes, int ano) {
-
+        if (mes > 12 || mes < 01) {
+            throw new RuntimeException("Data inválida");
+        }
         funcionarios_contem_beneficios.forEach((funcionario) -> {
             if (funcionario.cargo == Cargo.secretario) {
                 Double salario = (1000.00 * (ano - funcionario.getAnocontratacao()) + 7000.00);
