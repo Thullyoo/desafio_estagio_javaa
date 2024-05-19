@@ -21,10 +21,11 @@ public class GerenciadorFuncionarios {
                 Double salario = (1000.00 * (ano - funcionario.getAnocontratacao()) + 7000.00);
                 Double beneficio = salario * 0.20;
                 valorTotal += salario + beneficio;
+
             }
 
             if (funcionario.cargo == Cargo.vendedor) {
-                Double salario = (1000.00 * (ano - funcionario.getAnocontratacao()) + 7000.00);
+                Double salario = (1800.00 * (ano - funcionario.getAnocontratacao()) + 12000.00);
                 Double beneficio = 0.0;
                 for (Venda v : funcionario.vendas) {
                     if (v.getAnovenda() == ano && v.getMesvenda() == mes) {
@@ -32,6 +33,7 @@ public class GerenciadorFuncionarios {
                     }
                 }
                 valorTotal += salario + beneficio;
+
             }
 
             if (funcionario.cargo == Cargo.gerente) {
@@ -56,7 +58,7 @@ public class GerenciadorFuncionarios {
             }
 
             if (funcionario.cargo == Cargo.vendedor) {
-                Double salario = (1000.00 * (ano - funcionario.getAnocontratacao()) + 7000.00);
+                Double salario = (1800.00 * (ano - funcionario.getAnocontratacao()) + 12000.00);
                 valorTotal += salario;
             }
 
@@ -109,12 +111,12 @@ public class GerenciadorFuncionarios {
                 valorTotal += salario + beneficio;
                 if (salario + beneficio > maiorValorFuncionarioNoMes) {
                     maiorValorFuncionarioNoMes = salario;
-                    funcionarioComMaiorValor = "O funcionário com o maior valor de salário junto com beneficios é o " + funcionario.getNome() + " no cargo de " + funcionario.getCargo() + " com o valor de R$ " + salario + beneficio;
+                    funcionarioComMaiorValor = "O funcionário com o maior valor de salário junto com beneficios é " + funcionario.getNome() + " no cargo de " + funcionario.getCargo() + " com o valor de R$ " + salario + beneficio;
                 }
             }
 
             if (funcionario.cargo == Cargo.vendedor) {
-                Double salario = (1000.00 * (ano - funcionario.getAnocontratacao()) + 7000.00);
+                Double salario = (1800.00 * (ano - funcionario.getAnocontratacao()) + 12000.00);
                 Double beneficio = 0.0;
                 for (Venda v : funcionario.vendas) {
                     if (v.getAnovenda() == ano && v.getMesvenda() == mes) {
@@ -124,7 +126,7 @@ public class GerenciadorFuncionarios {
                 valorTotal += salario + beneficio;
                 if (salario + beneficio > maiorValorFuncionarioNoMes) {
                     maiorValorFuncionarioNoMes = salario;
-                    funcionarioComMaiorValor = "O funcionário com o maior valor de salário junto com beneficios é o " + funcionario.getNome() + " no cargo de " + funcionario.getCargo() + " com o valor de R$ " + salario + beneficio;
+                    funcionarioComMaiorValor = "O funcionário com o maior valor de salário junto com beneficios é " + funcionario.getNome() + " no cargo de " + funcionario.getCargo() + " com o valor de R$ " + salario + beneficio;
                 }
             }
 
@@ -133,7 +135,7 @@ public class GerenciadorFuncionarios {
                 valorTotal += salario;
                 if (salario > maiorValorFuncionarioNoMes) {
                     maiorValorFuncionarioNoMes = salario;
-                    funcionarioComMaiorValor = "O funcionário com o maior valor de salário junto com beneficios é o " + funcionario.getNome() + " no cargo de " + funcionario.getCargo() + " com o valor de R$ " + salario;
+                    funcionarioComMaiorValor = "O funcionário com o maior valor de salário junto com beneficios é " + funcionario.getNome() + " no cargo de " + funcionario.getCargo() + " com o valor de R$ " + salario;
                 }
             }
 
@@ -156,7 +158,7 @@ public class GerenciadorFuncionarios {
                 valorTotal += beneficio;
                 if (beneficio > maiorBeneficioNoMes) {
                     maiorBeneficioNoMes = beneficio;
-                    funcionarioComMaiorBeneficio = "O funcionário com o maior valor de beneficio é o " + funcionario.getNome() + " no cargo de " + funcionario.getCargo() + " com o valor de R$ " + beneficio;
+                    funcionarioComMaiorBeneficio = "O funcionário com o maior valor de beneficio é " + funcionario.getNome() + " no cargo de " + funcionario.getCargo() + " com o valor de R$ " + beneficio;
                 }
             }
 
@@ -170,7 +172,7 @@ public class GerenciadorFuncionarios {
                 valorTotal += beneficio;
                 if (beneficio > maiorBeneficioNoMes) {
                     maiorBeneficioNoMes = beneficio;
-                    funcionarioComMaiorBeneficio = "O funcionário com o maior valor de beneficio é o " + funcionario.getNome() + " no cargo de " + funcionario.getCargo() + " com o valor de R$ " + beneficio;
+                    funcionarioComMaiorBeneficio = "O funcionário com o maior valor de beneficio é " + funcionario.getNome() + " no cargo de " + funcionario.getCargo() + " com o valor de R$ " + beneficio;
                 }
             }
 
@@ -192,7 +194,7 @@ public class GerenciadorFuncionarios {
                     }
                     if ( valorVenda > maiorVendaNoMes) {
                         maiorVendaNoMes = valorVenda;
-                        maiorVendedor = "O funcionário com o maior valor de venda no mês é o " + funcionario.getNome() + " no cargo de " + funcionario.getCargo() + " com o valor de R$ " + valorVenda;
+                        maiorVendedor = "O funcionário com o maior valor de venda no mês é " + funcionario.getNome() + " no cargo de " + funcionario.getCargo() + " com o valor de R$ " + valorVenda;
                     }
                 }
         );
