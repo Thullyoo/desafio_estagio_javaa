@@ -1,16 +1,22 @@
 public class Venda {
 
-    String datavenda;
+    Integer mesvenda;
+    Integer anovenda;
 
     Double valor;
 
-    public Venda(String datavenda, Double valor) {
-        this.datavenda = datavenda;
+    public Venda(Integer mesvenda, Integer anovenda, Double valor) {
+        this.mesvenda = mesvenda;
+        this.anovenda = anovenda;
         this.valor = valor;
     }
 
-    public String getDatavenda() {
-        return datavenda;
+    public Integer getMesvenda() {
+        return mesvenda;
+    }
+
+    public Integer getAnovenda() {
+        return anovenda;
     }
 
     public Double getValor() {
@@ -20,7 +26,8 @@ public class Venda {
     @Override
     public String toString() {
         return "Venda{" +
-                "datavenda='" + datavenda + '\'' +
+                "mesvenda=" + mesvenda +
+                ", anovenda=" + anovenda +
                 ", valor=" + valor +
                 '}';
     }
